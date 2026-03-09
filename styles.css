@@ -419,7 +419,18 @@ body {
 .film-bg--rambo  { position:absolute;inset:0;background:linear-gradient(160deg,#050d05 0%,#0f280f 45%,var(--rambo-green-dk) 100%); }
 .film-bg--rambo2 { position:absolute;inset:0;background:linear-gradient(160deg,#060d06 0%,#122012 50%,#1f3a1f 100%); }
 
-.film-img-layer {
+.film-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.55;
+  filter: grayscale(20%) contrast(1.1);
+}
+
+
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(10,5,5,0.95) 0%, rgba(10,5,5,0.4) 60%, transparent 100%);
