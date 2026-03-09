@@ -3,102 +3,464 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Biography Project</title>
+  <title>Sylvester Stallone — Role Model</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <!-- HERO -->
   <header class="hero">
-    <div class="overlay">
-      <h1>Biography Project</h1>
-      <p>Discover the life, story, and achievements of our chosen character</p>
+    <div class="hero-bg-text">STALLONE</div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label">Our Role Model</p>
+      <h1>Sylvester<br><span>Stallone</span></h1>
+      <p class="hero-sub">"Every champion was once a contender who refused to give up."</p>
+      <a href="#general" class="hero-cta">Explore His Story</a>
     </div>
+    <div class="scroll-hint">↓</div>
   </header>
 
+  <!-- NAV -->
   <nav class="navbar">
-    <a href="#about-us">About Us</a>
-    <a href="#character">Character</a>
-    <a href="#childhood">Childhood</a>
-    <a href="#young-age">Young Age</a>
-    <a href="#adult-life">Adult Life</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#facts">Interesting Facts</a>
+    <div class="nav-inner">
+      <span class="nav-brand">SLY</span>
+      <div class="nav-links">
+        <a href="#general">General</a>
+        <a href="#films">Films</a>
+        <a href="#info">Info</a>
+        <a href="#childhood">Childhood</a>
+        <a href="#professional">Professional</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#connections">Connections</a>
+        <a href="#reason">Why Him</a>
+        <a href="#team">Team</a>
+      </div>
+    </div>
   </nav>
 
-  <main class="container">
+  <main>
 
-    <section id="about-us" class="card">
-      <h2>About Us</h2>
-      <p>We are a team of students who created this project for our English class. Our goal is to present the life of an important person in a creative, clear, and interesting way.</p>
-      <div class="team-box">
-        <div class="team-member">
-          <h3>Student 1</h3>
-          <p>Research and design</p>
-        </div>
-        <div class="team-member">
-          <h3>Student 2</h3>
-          <p>Writing and editing</p>
-        </div>
-        <div class="team-member">
-          <h3>Student 3</h3>
-          <p>Presentation and layout</p>
+    <!-- GENERAL -->
+    <section id="general" class="section section--dark">
+      <div class="container">
+        <div class="section-label">01 — General</div>
+        <h2 class="section-title">General Description</h2>
+        <div class="general-grid">
+          <div class="general-portrait">
+            <div class="portrait-frame">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Sylvester_Stallone_2010.jpg/800px-Sylvester_Stallone_2010.jpg" alt="Sylvester Stallone" onerror="this.src='https://via.placeholder.com/400x500/1a1a1a/c8a96e?text=STALLONE'">
+              <div class="portrait-accent"></div>
+            </div>
+          </div>
+          <div class="general-info">
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">Full Name</span>
+                <span class="info-value">Sylvester Enzio Stallone</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Born</span>
+                <span class="info-value">July 6, 1946 — New York City</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Nationality</span>
+                <span class="info-value">American</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Professions</span>
+                <span class="info-value">Actor · Director · Screenwriter</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Known For</span>
+                <span class="info-value">Rocky, Rambo, The Expendables</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Active Since</span>
+                <span class="info-value">1969 — Present</span>
+              </div>
+            </div>
+            <p class="general-desc">
+              Sylvester Stallone is one of the most iconic figures in Hollywood history. 
+              Rising from poverty and personal hardship, he became a global symbol of perseverance, 
+              writing and starring in <em>Rocky</em> — a film that went on to win the Academy Award 
+              for Best Picture. His story mirrors the characters he portrays: a fighter who never gives up.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="character" class="card">
-      <h2>About the Character</h2>
-      <div class="character-profile">
-        <img src="https://via.placeholder.com/220x260" alt="Character photo">
-        <div>
-          <p><strong>Name:</strong> Marie Curie</p>
-          <p><strong>Birth Date:</strong> November 7, 1867</p>
-          <p><strong>Nationality:</strong> Polish-French</p>
-          <p><strong>Profession:</strong> Physicist and Chemist</p>
-          <p><strong>Known For:</strong> Research on radioactivity</p>
+    <!-- CAROUSEL -->
+    <section id="films" class="section section--films">
+      <div class="container">
+        <div class="section-label">02 — Films</div>
+        <h2 class="section-title">Most Famous Movies</h2>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+
+          <div class="film-card active" style="--accent:#e63946">
+            <div class="film-year">1976</div>
+            <div class="film-bg" style="background: linear-gradient(160deg, #1a0a0a 0%, #3d0d0d 50%, #e63946 100%)"></div>
+            <div class="film-content">
+              <div class="film-icon">🥊</div>
+              <h3 class="film-title">ROCKY</h3>
+              <p class="film-desc">The underdog boxer story that changed everything. Stallone wrote the script and refused to sell it unless he could star in it — a decision that made history.</p>
+              <div class="film-tag">Academy Award — Best Picture</div>
+            </div>
+          </div>
+
+          <div class="film-card" style="--accent:#f4a261">
+            <div class="film-year">1982</div>
+            <div class="film-bg" style="background: linear-gradient(160deg, #0a0a0a 0%, #1a1a00 50%, #4a3000 100%)"></div>
+            <div class="film-content">
+              <div class="film-icon">🎖️</div>
+              <h3 class="film-title">FIRST BLOOD</h3>
+              <p class="film-desc">John Rambo, a haunted Vietnam veteran, becomes a symbol of inner strength and survival. One of the most defining action films in cinema history.</p>
+              <div class="film-tag">Iconic War Action Franchise</div>
+            </div>
+          </div>
+
+          <div class="film-card" style="--accent:#c8a96e">
+            <div class="film-year">1985</div>
+            <div class="film-bg" style="background: linear-gradient(160deg, #050510 0%, #0d0d2b 50%, #1a1a4d 100%)"></div>
+            <div class="film-content">
+              <div class="film-icon">🏆</div>
+              <h3 class="film-title">ROCKY IV</h3>
+              <p class="film-desc">Rocky fights a Soviet superathlete, becoming a symbol of perseverance against all odds. A film that transcended sport and became a Cold War cultural moment.</p>
+              <div class="film-tag">Box Office: $300M Worldwide</div>
+            </div>
+          </div>
+
+          <div class="film-card" style="--accent:#90e0ef">
+            <div class="film-year">1993</div>
+            <div class="film-bg" style="background: linear-gradient(160deg, #000d1a 0%, #002233 50%, #003344 100%)"></div>
+            <div class="film-content">
+              <div class="film-icon">🧗</div>
+              <h3 class="film-title">CLIFFHANGER</h3>
+              <p class="film-desc">A thrilling mountain rescue thriller where Stallone performs breathtaking stunts at real altitude. A showcase of his dedication to physical performance.</p>
+              <div class="film-tag">Action Adventure Classic</div>
+            </div>
+          </div>
+
+          <div class="film-card" style="--accent:#f72585">
+            <div class="film-year">2006</div>
+            <div class="film-bg" style="background: linear-gradient(160deg, #1a000d 0%, #330014 50%, #1a0010 100%)"></div>
+            <div class="film-content">
+              <div class="film-icon">🌅</div>
+              <h3 class="film-title">ROCKY BALBOA</h3>
+              <p class="film-desc">A powerful comeback — both for the character and Stallone himself — proving that age is just a number when heart and determination are in place.</p>
+              <div class="film-tag">The Iconic Comeback</div>
+            </div>
+          </div>
+
+          <div class="film-card" style="--accent:#7209b7">
+            <div class="film-year">2015</div>
+            <div class="film-bg" style="background: linear-gradient(160deg, #0a0010 0%, #1a0030 50%, #2d0050 100%)"></div>
+            <div class="film-content">
+              <div class="film-icon">🥋</div>
+              <h3 class="film-title">CREED</h3>
+              <p class="film-desc">As Rocky's trainer, Stallone delivers his finest dramatic performance, earning a Golden Globe. He passed the torch gracefully to a new generation.</p>
+              <div class="film-tag">Golden Globe Winner</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevBtn">&#8592;</button>
+          <div class="carousel-dots" id="carouselDots"></div>
+          <button class="carousel-btn" id="nextBtn">&#8594;</button>
         </div>
       </div>
     </section>
 
-    <section id="childhood" class="card">
-      <h2>Childhood</h2>
-      <p>Marie Curie was born in Warsaw, Poland. During her childhood, she was very intelligent and curious. She loved learning and spent a lot of time reading books and studying science.</p>
+    <!-- INFO -->
+    <section id="info" class="section section--light">
+      <div class="container">
+        <div class="section-label">03 — Information</div>
+        <h2 class="section-title">Key Information</h2>
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-card-icon">🎬</div>
+            <h3>Filmmaker</h3>
+            <p>Stallone has written, directed, and starred in dozens of films across five decades, making him one of the most complete creative forces in Hollywood.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">✍️</div>
+            <h3>Writer First</h3>
+            <p>Before acting, Stallone was a passionate writer. The Rocky script was written in just 3 days — a burst of creative energy that changed his life forever.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">💪</div>
+            <h3>Physical Dedication</h3>
+            <p>Known for extreme physical training regimens, Stallone has redefined what athletes and actors can achieve well into their 70s, inspiring millions.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">🌍</div>
+            <h3>Global Icon</h3>
+            <p>His characters Rocky and Rambo are recognized in every country on Earth — cultural phenomena that shaped an entire generation's understanding of resilience.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">🎨</div>
+            <h3>Artist</h3>
+            <p>Few know that Stallone is also a serious visual artist. His paintings have been exhibited in galleries worldwide and are highly sought after by collectors.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">❤️</div>
+            <h3>Philanthropist</h3>
+            <p>Through various foundations, Stallone has contributed to charities supporting veterans, children's causes, and aspiring artists from underprivileged backgrounds.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="young-age" class="card">
-      <h2>Young Age</h2>
-      <p>As a young woman, Marie worked hard to continue her studies. She moved to Paris to attend university, where she studied physics and mathematics. Her determination helped her overcome many challenges.</p>
+    <!-- CHILDHOOD -->
+    <section id="childhood" class="section section--dark">
+      <div class="container">
+        <div class="section-label">04 — Origins</div>
+        <h2 class="section-title">Childhood</h2>
+        <div class="story-layout">
+          <div class="story-timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">1946</div>
+              <div class="timeline-text">Born in New York City's Hell's Kitchen neighborhood with a difficult birth that caused partial paralysis of his face — the origin of his iconic facial expression and speech pattern.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">1950s</div>
+              <div class="timeline-text">His parents divorced when he was young. He was placed in foster homes and later lived between his mother in Philadelphia and his father in Maryland — a childhood marked by constant change.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">1960s</div>
+              <div class="timeline-text">Expelled from multiple schools due to behavioral issues, he found discipline and direction through sports — particularly football and weightlifting — which shaped his future characters.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">College</div>
+              <div class="timeline-text">Attended the University of Miami on an athletic scholarship, where he studied drama and discovered his true passion for acting and storytelling.</div>
+            </div>
+          </div>
+          <div class="story-quote">
+            <blockquote>
+              "I am not the richest, smartest, or most talented person in the world, but I succeeded because I keep going and going and going."
+              <cite>— Sylvester Stallone</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="adult-life" class="card">
-      <h2>Adult Life</h2>
-      <p>In her adult life, Marie Curie became an important scientist. She worked with her husband, Pierre Curie, and together they made important discoveries. She dedicated her life to science and education.</p>
+    <!-- PROFESSIONAL LIFE -->
+    <section id="professional" class="section section--gold">
+      <div class="container">
+        <div class="section-label">05 — Career</div>
+        <h2 class="section-title">Professional Life</h2>
+        <div class="pro-grid">
+          <div class="pro-block">
+            <h3>The Struggle Years <span>1969–1975</span></h3>
+            <p>Before fame, Stallone took any acting job he could find. He lived in near poverty in New York City, sometimes sleeping in bus stations. He refused to sell the Rocky script for a large sum unless he could star in it — a decision most studios rejected until one believed in him.</p>
+          </div>
+          <div class="pro-block">
+            <h3>The Rocky Era <span>1976–1990</span></h3>
+            <p>Rocky (1976) became one of the greatest success stories in Hollywood history, earning $225 million on a $1 million budget. Stallone wrote, starred in, and directed multiple sequels, cementing himself as a bankable superstar and cultural phenomenon.</p>
+          </div>
+          <div class="pro-block">
+            <h3>Action Icon <span>1982–2000</span></h3>
+            <p>The Rambo franchise established him as the defining action hero of the 1980s. Films like Cobra, Demolition Man, and Cliffhanger kept him at the top of the box office throughout two decades of dominance.</p>
+          </div>
+          <div class="pro-block">
+            <h3>Legacy & Reinvention <span>2006–Present</span></h3>
+            <p>Rocky Balboa, Creed, and The Expendables reinvented his career. His Oscar-nominated performance in Creed proved he was not just an action hero but a serious dramatic actor — a legacy cemented over five decades.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="achievements" class="card">
-      <h2>Achievements</h2>
-      <ul>
-        <li>Discovered polonium and radium</li>
-        <li>Won two Nobel Prizes</li>
-        <li>Made important contributions to medicine and science</li>
-        <li>Became one of the most influential women in history</li>
-      </ul>
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="section section--dark">
+      <div class="container">
+        <div class="section-label">06 — Legacy</div>
+        <h2 class="section-title">Achievements</h2>
+        <div class="achievements-grid">
+          <div class="achievement">
+            <div class="achievement-number">2×</div>
+            <div class="achievement-desc">Academy Award Nominations (Rocky — Best Actor & Original Screenplay)</div>
+          </div>
+          <div class="achievement">
+            <div class="achievement-number">1×</div>
+            <div class="achievement-desc">Golden Globe Award — Best Supporting Actor (Creed, 2016)</div>
+          </div>
+          <div class="achievement">
+            <div class="achievement-number">$4B+</div>
+            <div class="achievement-desc">Total worldwide box office revenue from his films</div>
+          </div>
+          <div class="achievement">
+            <div class="achievement-number">50+</div>
+            <div class="achievement-desc">Years of continuous career in Hollywood</div>
+          </div>
+          <div class="achievement">
+            <div class="achievement-number">2</div>
+            <div class="achievement-desc">Characters on AFI's 100 Greatest Heroes list: Rocky Balboa & John Rambo</div>
+          </div>
+          <div class="achievement">
+            <div class="achievement-number">★</div>
+            <div class="achievement-desc">Hollywood Walk of Fame star, honoring his contribution to film</div>
+          </div>
+        </div>
+        <div class="achievements-list">
+          <div class="ach-item">🥊 Created and produced the entire Rocky franchise — 9 films spanning 50 years</div>
+          <div class="ach-item">🎬 One of only three people nominated for Oscar in both acting and writing for the same film (alongside Charlie Chaplin and Orson Welles)</div>
+          <div class="ach-item">🏛️ Rocky steps at Philadelphia Museum of Art named a cultural landmark after the films</div>
+          <div class="ach-item">🎨 Exhibited paintings in major galleries in Europe and the United States</div>
+          <div class="ach-item">📚 Written and directed numerous screenplays, demonstrating a multi-faceted creative talent</div>
+        </div>
+      </div>
     </section>
 
-    <section id="facts" class="card">
-      <h2>Interesting Facts</h2>
-      <ul>
-        <li>She was the first woman to win a Nobel Prize.</li>
-        <li>She was the first person to win two Nobel Prizes in different sciences.</li>
-        <li>Her research helped develop medical treatments.</li>
-      </ul>
+    <!-- CONNECTIONS -->
+    <section id="connections" class="section section--light">
+      <div class="container">
+        <div class="section-label">07 — Network</div>
+        <h2 class="section-title">Relevant Connections</h2>
+        <div class="connections-grid">
+          <div class="connection-card">
+            <div class="connection-role">Mentor</div>
+            <h3>John G. Avildsen</h3>
+            <p>Director of the original Rocky, whose vision and guidance helped shape Stallone's storytelling instincts and cinematic voice.</p>
+          </div>
+          <div class="connection-card">
+            <div class="connection-role">Colleague & Friend</div>
+            <h3>Arnold Schwarzenegger</h3>
+            <p>His longtime rival and eventual close friend. Their friendly competition during the 80s defined Hollywood action cinema for an entire generation.</p>
+          </div>
+          <div class="connection-card">
+            <div class="connection-role">Creative Partner</div>
+            <h3>Ryan Coogler</h3>
+            <p>Director of Creed, who breathed new life into the Rocky universe and helped Stallone deliver his finest dramatic performance in decades.</p>
+          </div>
+          <div class="connection-card">
+            <div class="connection-role">Family</div>
+            <h3>Sage Stallone</h3>
+            <p>His son, who appeared in Rocky V and pursued filmmaking before his untimely passing — a profound personal loss that deeply shaped Stallone's later work.</p>
+          </div>
+          <div class="connection-card">
+            <div class="connection-role">Business Partner</div>
+            <h3>Bruce Willis & Schwarzenegger</h3>
+            <p>Co-founded Planet Hollywood, a global restaurant chain, bringing together the biggest action stars of the era in a unique business venture.</p>
+          </div>
+          <div class="connection-card">
+            <div class="connection-role">Inspiration To</div>
+            <h3>Millions Worldwide</h3>
+            <p>From athletes to entrepreneurs, Stallone's story of rejection and persistence has inspired countless people to pursue their dreams against all odds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REASON -->
+    <section id="reason" class="section section--dark reason-section">
+      <div class="container">
+        <div class="section-label">08 — Our Choice</div>
+        <h2 class="section-title">Why We Chose Him</h2>
+        <div class="reason-content">
+          <div class="reason-main">
+            <p class="reason-intro">We chose Sylvester Stallone as our role model not because of his fame or fortune, but because of the <em>path</em> he walked to get there.</p>
+            <div class="reasons-list">
+              <div class="reason-item">
+                <span class="reason-icon">🔥</span>
+                <div>
+                  <strong>Resilience Against Rejection</strong>
+                  <p>He was told "no" by over 1,500 agents and casting directors before his breakthrough. He refused to give up — a lesson for anyone facing obstacles.</p>
+                </div>
+              </div>
+              <div class="reason-item">
+                <span class="reason-icon">✍️</span>
+                <div>
+                  <strong>Creative Self-Belief</strong>
+                  <p>He wrote his own opportunities when Hollywood wouldn't give them to him. He teaches us to create the doors we need, not just knock on existing ones.</p>
+                </div>
+              </div>
+              <div class="reason-item">
+                <span class="reason-icon">🌱</span>
+                <div>
+                  <strong>Growth at Every Age</strong>
+                  <p>Even at 70+, Stallone continues to reinvent himself as an actor, artist, and storyteller. There is no age limit to ambition.</p>
+                </div>
+              </div>
+              <div class="reason-item">
+                <span class="reason-icon">💡</span>
+                <div>
+                  <strong>His Message is Universal</strong>
+                  <p>You don't need to be born with advantages. Hard work, passion, and refusing to quit are enough to build something extraordinary.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reason-stat-block">
+            <div class="big-stat">1,500+</div>
+            <div class="big-stat-label">Rejections before Rocky</div>
+            <div class="big-stat">3</div>
+            <div class="big-stat-label">Days to write the script</div>
+            <div class="big-stat">$1M</div>
+            <div class="big-stat-label">Budget for Rocky</div>
+            <div class="big-stat">$225M</div>
+            <div class="big-stat-label">Rocky's box office</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section section--team">
+      <div class="container">
+        <div class="section-label">09 — Us</div>
+        <h2 class="section-title">About the Team</h2>
+        <p class="team-intro">We are 5 students who believe in telling powerful stories about people who inspire change. Like Stallone, we each bring something different to the table.</p>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar" style="--c:#e63946">01</div>
+            <div class="team-name">Team Member 1</div>
+            <div class="team-role">Research Lead</div>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" style="--c:#f4a261">02</div>
+            <div class="team-name">Team Member 2</div>
+            <div class="team-role">Content Writer</div>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" style="--c:#c8a96e">03</div>
+            <div class="team-name">Team Member 3</div>
+            <div class="team-role">Web Designer</div>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" style="--c:#7209b7">04</div>
+            <div class="team-name">Team Member 4</div>
+            <div class="team-role">Editor</div>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" style="--c:#90e0ef">05</div>
+            <div class="team-name">Team Member 5</div>
+            <div class="team-role">Presenter</div>
+          </div>
+        </div>
+        <p class="team-footer-note">English Class Project — Role Model Assignment</p>
+      </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>English Class Project | Biography Website</p>
+    <div class="footer-inner">
+      <div class="footer-quote">"It ain't about how hard you hit. It's about how hard you can get hit and keep moving forward."</div>
+      <div class="footer-credit">Role Model Project · English Class · 2025</div>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
