@@ -1,4 +1,6 @@
-// ===== CAROUSEL =====
+// ═══════════════════════════════════
+// CAROUSEL (automático cada 4.5s)
+// ═══════════════════════════════════
 const track = document.getElementById('carouselTrack');
 const cards = document.querySelectorAll('.film-card');
 const dotsContainer = document.getElementById('carouselDots');
@@ -8,12 +10,12 @@ const nextBtn = document.getElementById('nextBtn');
 let current = 0;
 let autoTimer;
 
-// Build dots
+// Crear dots
 cards.forEach((_, i) => {
   const dot = document.createElement('div');
   dot.classList.add('dot');
   if (i === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => goTo(i));
+  dot.addEventListener('click', () => { goTo(i); resetTimer(); });
   dotsContainer.appendChild(dot);
 });
 
@@ -42,27 +44,45 @@ function resetTimer() {
 
 resetTimer();
 
-// ===== SCROLL REVEAL =====
-const revealEls = document.querySelectorAll('.section-title, .section-label, .info-card, .achievement, .connection-card, .pro-block, .team-card, .ach-item, .timeline-item, .reason-item');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-
-revealEls.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
+// Touch/swipe support for carousel
+let touchStartX = 0;
+track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+track.addEventListener('touchend', e => {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); resetTimer(); }
 });
 
-// ===== ACTIVE NAV LINK =====
+// ═══════════════════════════════════
+// SCROLL REVEAL
+// ═══════════════════════════════════
+const revealTargets = document.querySelectorAll(
+  '.section-title, .section-label, .info-card, .achievement, ' +
+  '.connection-card, .pro-block, .team-card, .ach-item, ' +
+  '.timeline-item, .reason-item, .general-grid, .film-content'
+);
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }, (i % 6) * 80); // stagger
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+revealTargets.forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  revealObserver.observe(el);
+});
+
+// ═══════════════════════════════════
+// ACTIVE NAV HIGHLIGHT
+// ═══════════════════════════════════
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -71,10 +91,12 @@ const sectionObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       const id = entry.target.getAttribute('id');
       navLinks.forEach(link => {
-        link.style.color = link.getAttribute('href') === `#${id}` ? '#c8a96e' : '';
+        const isActive = link.getAttribute('href') === `#${id}`;
+        link.style.color = isActive ? '#d4a017' : '';
+        link.style.background = isActive ? 'rgba(212,160,23,0.08)' : '';
       });
     }
   });
-}, { threshold: 0.4 });
+}, { threshold: 0.35 });
 
 sections.forEach(s => sectionObserver.observe(s));
