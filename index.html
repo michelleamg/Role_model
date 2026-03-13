@@ -10,10 +10,7 @@
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════
-       HERO
-       🖼️ Cambia YOUR_HERO_IMAGE.jpg por tu imagen de fondo (ej: stallone_hero.jpg)
-  ══════════════════════════════════════ -->
+  <!-- HERO — 🖼️ Pon tu imagen: style="background-image: url('YOUR_HERO.jpg')" -->
   <header class="hero">
     <div class="hero-img" style="background-image: url('YOUR_HERO_IMAGE.jpg')"></div>
     <div class="hero-overlay"></div>
@@ -26,14 +23,12 @@
     </div>
   </header>
 
-  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-inner">
       <span class="nav-brand">SLY</span>
       <div class="nav-links">
         <a href="#general">General</a>
         <a href="#films">Films</a>
-        <a href="#info">Info</a>
         <a href="#childhood">Childhood</a>
         <a href="#professional">Professional</a>
         <a href="#achievements">Achievements</a>
@@ -46,10 +41,8 @@
 
   <main>
 
-    <!-- ══════════════════════════════════════
-         01 — GENERAL
-    ══════════════════════════════════════ -->
-    <section id="general" class="section section--dark">
+    <!-- 01 GENERAL -->
+    <section id="general" class="section section--light">
       <div class="container">
         <div class="section-label">01 — General</div>
         <h2 class="section-title">General Description</h2>
@@ -57,13 +50,10 @@
 
           <div class="general-portrait">
             <div class="portrait-frame">
-              <!-- 🖼️ Cambia YOUR_PORTRAIT.jpg por tu foto (recomendado 400x500px) -->
+              <!-- 🖼️ YOUR_PORTRAIT.jpg -->
               <img src="YOUR_PORTRAIT.jpg" alt="Sylvester Stallone"
                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-              <div class="img-placeholder">
-                <span>📷</span>
-                <p>Tu foto aquí<br><small>src="YOUR_PORTRAIT.jpg"</small></p>
-              </div>
+              <div class="img-placeholder"><span>📷</span><p>Tu foto aquí<br><small>YOUR_PORTRAIT.jpg</small></p></div>
               <div class="portrait-accent"></div>
             </div>
           </div>
@@ -91,21 +81,25 @@
                 <span class="info-value">Rocky, Rambo, The Expendables</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Active Since</span>
-                <span class="info-value">1969 — Present</span>
+                <span class="info-label">Ambassador</span>
+                <span class="info-value">Special Ambassador of Hollywood</span>
               </div>
             </div>
-            <!-- ✏️ ESCRIBE AQUÍ la descripción general -->
-            <p class="general-desc empty-text">[ Escribe aquí la descripción general de Sylvester Stallone... ]</p>
+            <p class="general-desc">
+              Sylvester Stallone is an American actor, screenwriter and director who is well known
+              for his movie sagas Rocky and Rambo. He is a special ambassador of Hollywood.
+              During his childhood, he lived in poverty and had great difficulties, until he ended up
+              living in a shelter. His big opportunity came when he wrote Rocky, and the movie
+              became a huge cultural phenomenon. He once said that if he hadn't been an actor,
+              he would have been an abstract painter or writer.
+            </p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         02 — CARRUSEL DE PELÍCULAS (automático)
-    ══════════════════════════════════════ -->
+    <!-- 02 CARRUSEL -->
     <section id="films" class="section section--films">
       <div class="container">
         <div class="section-label">02 — Films</div>
@@ -115,97 +109,91 @@
       <div class="carousel-wrapper">
         <div class="carousel-track" id="carouselTrack">
 
-          <!-- ROCKY 1976
-               🖼️ Cambia YOUR_FILM_ROCKY.jpg por tu imagen (poster o escena) -->
+          <!-- 🖼️ rocky_1.jpg -->
           <div class="film-card">
             <div class="film-bg film-bg--rocky"></div>
-            <img class="film-photo" src="YOUR_FILM_ROCKY.jpg" alt="Rocky 1976" onerror="this.style.display='none'">
+            <img class="film-photo" src="rocky_1.jpg" alt="Rocky 1976" onerror="this.style.display='none'">
             <div class="film-img-layer"></div>
             <div class="film-year-bg">1976</div>
             <div class="film-content">
               <div class="film-badge badge--rocky">🥊 ROCKY</div>
               <h3 class="film-title">ROCKY</h3>
-              <p class="film-desc empty-text">[ Escribe sobre Rocky (1976)... ]</p>
+              <p class="film-desc">After watching a boxing match, Stallone wrote this script in just three days. He refused to sell it unless he could star in it — a decision that changed his life forever. Rocky won the Oscar for Best Picture.</p>
               <div class="film-tag tag--rocky">Academy Award — Best Picture</div>
             </div>
           </div>
 
-          <!-- FIRST BLOOD 1982
-               🖼️ Cambia YOUR_FILM_FIRSTBLOOD.jpg por tu imagen -->
+          <!-- 🖼️ first_blood_1.jpg -->
           <div class="film-card">
             <div class="film-bg film-bg--rambo"></div>
-            <img class="film-photo" src="YOUR_FILM_FIRSTBLOOD.jpg" alt="First Blood 1982" onerror="this.style.display='none'">
+            <img class="film-photo" src="first_blood_1.jpg" alt="First Blood 1982" onerror="this.style.display='none'">
             <div class="film-img-layer"></div>
             <div class="film-year-bg">1982</div>
             <div class="film-content">
               <div class="film-badge badge--rambo">🎖️ RAMBO</div>
               <h3 class="film-title">FIRST BLOOD</h3>
-              <p class="film-desc empty-text">[ Escribe sobre First Blood (1982)... ]</p>
+              <p class="film-desc">This film launched the Rambo franchise, which showcased the hardships of Vietnam veterans. John Rambo became a symbol of the "tough guy" era and one of cinema's greatest heroes.</p>
               <div class="film-tag tag--rambo">Iconic War Action Franchise</div>
             </div>
           </div>
 
-          <!-- ROCKY IV 1985
-               🖼️ Cambia YOUR_FILM_ROCKY4.jpg por tu imagen -->
+          <!-- 🖼️ rocky_4.jfif -->
           <div class="film-card">
             <div class="film-bg film-bg--rocky4"></div>
-            <img class="film-photo" src="YOUR_FILM_ROCKY4.jpg" alt="Rocky IV 1985" onerror="this.style.display='none'">
+            <img class="film-photo" src="rocky_4.jfif" alt="Rocky IV 1985" onerror="this.style.display='none'">
             <div class="film-img-layer"></div>
             <div class="film-year-bg">1985</div>
             <div class="film-content">
               <div class="film-badge badge--rocky">🏆 ROCKY IV</div>
               <h3 class="film-title">ROCKY IV</h3>
-              <p class="film-desc empty-text">[ Escribe sobre Rocky IV (1985)... ]</p>
+              <p class="film-desc">Rocky faces a Soviet superathlete in a fight that transcended sport and became a Cold War cultural moment. One of the highest-grossing entries in the franchise with $300M worldwide.</p>
               <div class="film-tag tag--rocky">$300M Worldwide</div>
             </div>
           </div>
 
-          <!-- RAMBO II 1985
-               🖼️ Cambia YOUR_FILM_RAMBO2.jpg por tu imagen -->
+          <!-- 🖼️ ramboII.jpg -->
           <div class="film-card">
             <div class="film-bg film-bg--rambo2"></div>
-            <img class="film-photo" src="YOUR_FILM_RAMBO2.jpg" alt="Rambo II 1985" onerror="this.style.display='none'">
+            <img class="film-photo" src="ramboII.jpg" alt="Rambo II 1985" onerror="this.style.display='none'">
             <div class="film-img-layer"></div>
             <div class="film-year-bg">1985</div>
             <div class="film-content">
               <div class="film-badge badge--rambo">🎖️ RAMBO II</div>
               <h3 class="film-title">RAMBO II</h3>
-              <p class="film-desc empty-text">[ Escribe sobre Rambo II (1985)... ]</p>
+              <p class="film-desc">John Rambo returns to Vietnam on a rescue mission. The film cemented Rambo as one of the most recognizable action franchises in Hollywood history, generating $300M worldwide.</p>
               <div class="film-tag tag--rambo">$300M Worldwide</div>
             </div>
           </div>
 
-          <!-- ROCKY BALBOA 2006
-               🖼️ Cambia YOUR_FILM_BALBOA.jpg por tu imagen -->
+          <!-- 🖼️ rocky_balboa.jpg — pon aquí tu imagen -->
           <div class="film-card">
             <div class="film-bg film-bg--balboa"></div>
-            <img class="film-photo" src="YOUR_FILM_BALBOA.jpg" alt="Rocky Balboa 2006" onerror="this.style.display='none'">
+            <img class="film-photo" src="rocky_balboa.jpg" alt="Rocky Balboa 2006" onerror="this.style.display='none'">
             <div class="film-img-layer"></div>
             <div class="film-year-bg">2006</div>
             <div class="film-content">
               <div class="film-badge badge--rocky">🌅 COMEBACK</div>
               <h3 class="film-title">ROCKY BALBOA</h3>
-              <p class="film-desc empty-text">[ Escribe sobre Rocky Balboa (2006)... ]</p>
+              <p class="film-desc">Even in his 60s, Stallone continued to reinvent himself. Rocky Balboa proved that age is no obstacle when passion and determination drive you forward.</p>
               <div class="film-tag tag--rocky">The Iconic Comeback</div>
             </div>
           </div>
 
-          <!-- CREED 2015 -->
+          <!-- 🖼️ creed.jpg -->
           <div class="film-card">
-            <!-- 🖼️ Cambia YOUR_FILM_CREED.jpg por tu imagen -->
             <div class="film-bg film-bg--creed"></div>
-            <img class="film-photo" src="YOUR_FILM_CREED.jpg" alt="Creed 2015" onerror="this.style.display='none'">
+            <img class="film-photo" src="creed.jpg" alt="Creed 2015" onerror="this.style.display='none'">
             <div class="film-img-layer"></div>
             <div class="film-year-bg">2015</div>
             <div class="film-content">
               <div class="film-badge badge--rocky">🥋 CREED</div>
               <h3 class="film-title">CREED</h3>
-              <p class="film-desc empty-text">[ Escribe sobre Creed (2015)... ]</p>
+              <p class="film-desc">Stallone returned as Rocky's trainer. His performance was so powerful that many journalists claimed he deserved the Oscar. He won the Golden Globe for Best Supporting Actor.</p>
               <div class="film-tag tag--rocky">Golden Globe Winner</div>
             </div>
           </div>
 
-        </div><!-- /carousel-track -->
+        </div>
 
         <div class="carousel-controls">
           <button class="carousel-btn" id="prevBtn">&#8592;</button>
@@ -215,74 +203,10 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         03 — INFORMATION
-    ══════════════════════════════════════ -->
-    <section id="info" class="section section--jungle">
+    <!-- 03 CHILDHOOD -->
+    <section id="childhood" class="section section--light">
       <div class="container">
-        <div class="section-label">03 — Information</div>
-        <h2 class="section-title">Key Information</h2>
-        <div class="info-cards">
-
-          <div class="info-card">
-            <!-- 🖼️ Imagen opcional — reemplaza YOUR_INFO_1.jpg o déjalo con ícono -->
-            <div class="info-card-img">
-              <img src="YOUR_INFO_1.jpg" alt="Info 1" onerror="this.parentElement.innerHTML='<span class=\'info-icon\'>🎬</span>'">
-            </div>
-            <h3>Filmmaker</h3>
-            <p class="empty-text">[ Escribe información aquí... ]</p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-card-img">
-              <img src="YOUR_INFO_2.jpg" alt="Info 2" onerror="this.parentElement.innerHTML='<span class=\'info-icon\'>✍️</span>'">
-            </div>
-            <h3>Writer First</h3>
-            <p class="empty-text">[ Escribe información aquí... ]</p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-card-img">
-              <img src="YOUR_INFO_3.jpg" alt="Info 3" onerror="this.parentElement.innerHTML='<span class=\'info-icon\'>💪</span>'">
-            </div>
-            <h3>Physical Dedication</h3>
-            <p class="empty-text">[ Escribe información aquí... ]</p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-card-img">
-              <img src="YOUR_INFO_4.jpg" alt="Info 4" onerror="this.parentElement.innerHTML='<span class=\'info-icon\'>🌍</span>'">
-            </div>
-            <h3>Global Icon</h3>
-            <p class="empty-text">[ Escribe información aquí... ]</p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-card-img">
-              <img src="YOUR_INFO_5.jpg" alt="Info 5" onerror="this.parentElement.innerHTML='<span class=\'info-icon\'>🎨</span>'">
-            </div>
-            <h3>Artist</h3>
-            <p class="empty-text">[ Escribe información aquí... ]</p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-card-img">
-              <img src="YOUR_INFO_6.jpg" alt="Info 6" onerror="this.parentElement.innerHTML='<span class=\'info-icon\'>❤️</span>'">
-            </div>
-            <h3>Philanthropist</h3>
-            <p class="empty-text">[ Escribe información aquí... ]</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-         04 — CHILDHOOD
-    ══════════════════════════════════════ -->
-    <section id="childhood" class="section section--dark">
-      <div class="container">
-        <div class="section-label">04 — Origins</div>
+        <div class="section-label">03 — Origins</div>
         <h2 class="section-title">Childhood</h2>
         <div class="story-layout">
 
@@ -291,45 +215,40 @@
               <div class="timeline-dot"></div>
               <div class="timeline-body">
                 <div class="timeline-year">1946</div>
-                <p class="empty-text">[ Escribe sobre su nacimiento... ]</p>
+                <p>Sylvester Stallone was born on July 6, 1946, in New York City, USA. During his birth, doctors used forceps which caused nerve damage in his face. This left him with partial facial paralysis and a unique speech.</p>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-body">
                 <div class="timeline-year">1950s</div>
-                <p class="empty-text">[ Escribe sobre su infancia... ]</p>
+                <p>Stallone had a difficult childhood. His parents had many problems and later divorced. Because of his speech and appearance, he was bullied at school, but these experiences made him stronger and more determined.</p>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-body">
                 <div class="timeline-year">1960s</div>
-                <p class="empty-text">[ Escribe sobre su adolescencia... ]</p>
+                <p>As a teenager, Stallone became interested in sports and acting. He discovered that acting was something he loved and decided to pursue it as a career.</p>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-body">
                 <div class="timeline-year">College</div>
-                <p class="empty-text">[ Escribe sobre su etapa universitaria... ]</p>
+                <p>He studied drama at the University of Miami. During this time, he worked hard to become an actor and began writing — a skill that would later change his life.</p>
               </div>
             </div>
           </div>
 
           <div class="story-side">
-            <!-- 🖼️ Foto de infancia -->
             <div class="childhood-img-frame">
-              <img src="YOUR_CHILDHOOD_IMG.jpg" alt="Young Stallone"
+              <img src="sy_e.jpg" alt="Young Stallone"
                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-              <div class="img-placeholder">
-                <span>📷</span>
-                <p>Foto de infancia<br><small>YOUR_CHILDHOOD_IMG.jpg</small></p>
-              </div>
+              <div class="img-placeholder"><span>📷</span><p>Foto de infancia<br><small>YOUR_CHILDHOOD.jpg</small></p></div>
             </div>
             <blockquote class="story-quote">
-              <!-- ✏️ Escribe una cita aquí -->
-              <span class="empty-text">[ Escribe una cita de Stallone... ]</span>
+              "I am not the richest, smartest, or most talented person in the world, but I succeeded because I keep going and going and going."
               <cite>— Sylvester Stallone</cite>
             </blockquote>
           </div>
@@ -338,295 +257,277 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         05 — PROFESSIONAL LIFE
-    ══════════════════════════════════════ -->
-    <section id="professional" class="section section--blood">
+    <!-- 04 PROFESSIONAL LIFE -->
+    <section id="professional" class="section section--red">
       <div class="container">
-        <div class="section-label">05 — Career</div>
+        <div class="section-label">04 — Career</div>
         <h2 class="section-title">Professional Life</h2>
         <div class="pro-grid">
 
           <div class="pro-block">
-            <!-- 🖼️ Imagen del período -->
+            <!-- 🖼️ YOUR_PRO_1.jpg -->
             <div class="pro-img-slot">
-              <img src="YOUR_PRO_1.jpg" alt="Struggle Years"
-                   onerror="this.parentElement.innerHTML='<span class=\'pro-icon\'>🌑</span>'">
+              <img src="inicios.jpg" alt="Tough Beginnings" onerror="this.parentElement.innerHTML='<span class=\'pro-icon\'>🌑</span>'">
             </div>
-            <h3>The Struggle Years <span>1969–1975</span></h3>
-            <p class="empty-text">[ Escribe sobre sus años de lucha... ]</p>
+            <h3>Tough Beginnings <span>Mid 1970s</span></h3>
+            <p>In the mid-70s, Stallone was an actor with very little money. After watching a boxing match, he wrote the script for Rocky in just three days. Studios offered large sums for the script — but only without him as the star. He refused every offer until they agreed to let him play the lead role.</p>
           </div>
 
           <div class="pro-block">
+            <!-- 🖼️ YOUR_PRO_2.jpg -->
             <div class="pro-img-slot">
-              <img src="YOUR_PRO_2.jpg" alt="Rocky Era"
-                   onerror="this.parentElement.innerHTML='<span class=\'pro-icon\'>🥊</span>'">
+              <img src="rocky_2.jpeg" alt="Rocky Success" onerror="this.parentElement.innerHTML='<span class=\'pro-icon\'>🥊</span>'">
             </div>
-            <h3>The Rocky Era <span>1976–1990</span></h3>
-            <p class="empty-text">[ Escribe sobre la era Rocky... ]</p>
+            <h3>About the Success <span>1976</span></h3>
+            <p>Critics reported that Rocky was a great movie. It was later announced that Rocky had won the Oscar for Best Picture. The film was a defining moment in Hollywood history and turned Stallone into a global superstar overnight.</p>
           </div>
 
           <div class="pro-block">
+            <!-- 🖼️ YOUR_PRO_3.jpg -->
             <div class="pro-img-slot">
-              <img src="YOUR_PRO_3.jpg" alt="Action Icon"
-                   onerror="this.parentElement.innerHTML='<span class=\'pro-icon\'>🎖️</span>'">
+              <img src="icon.jpg" alt="Action Icon" onerror="this.parentElement.innerHTML='<span class=\'pro-icon\'>🎖️</span>'">
             </div>
-            <h3>Action Icon <span>1982–2000</span></h3>
-            <p class="empty-text">[ Escribe sobre Rambo y los años de acción... ]</p>
+            <h3>Action Icon & Global Fame <span>1980s–1990s</span></h3>
+            <p>During the 1980s and 1990s, Stallone dominated the box office. He created the Rambo franchise, which showcased the hardships of Vietnam veterans, and became a symbol of the "tough guy" era. His rivalry with Arnold Schwarzenegger actually motivated both of them to work harder and make better movies.</p>
           </div>
 
           <div class="pro-block">
+
             <div class="pro-img-slot">
-              <img src="YOUR_PRO_4.jpg" alt="Legacy"
-                   onerror="this.parentElement.innerHTML='<span class=\'pro-icon\'>🌅</span>'">
+              <img src="demilition.jpg" alt="Recent Success" onerror="this.parentElement.innerHTML='<span class=\'pro-icon\'>🌅</span>'">
             </div>
-            <h3>Legacy & Reinvention <span>2006–Present</span></h3>
-            <p class="empty-text">[ Escribe sobre Creed y su legado... ]</p>
+            <h3>Recent Success & Directing <span>2006–Present</span></h3>
+            <p>Even in his 70s, Stallone continues to reinvent himself. He created The Expendables franchise, bringing together almost every major action star from the last 40 years. In 2015 he returned as Rocky's trainer in Creed — a performance so powerful many said he deserved the Oscar. He remains one of the few actors with a #1 movie in six different decades.</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         06 — ACHIEVEMENTS
-    ══════════════════════════════════════ -->
-    <section id="achievements" class="section section--dark">
+    <!-- 05 ACHIEVEMENTS -->
+    <section id="achievements" class="section section--light">
       <div class="container">
-        <div class="section-label">06 — Legacy</div>
+        <div class="section-label">05 — Legacy</div>
         <h2 class="section-title">Achievements</h2>
-
         <div class="achievements-grid">
           <div class="achievement">
             <div class="achievement-number">2×</div>
-            <div class="achievement-desc">Oscar nominations — Best Actor & Original Screenplay (Rocky)</div>
+            <div class="achievement-desc">Oscar nominations — Best Actor & Best Original Screenplay for Rocky (1976)</div>
           </div>
           <div class="achievement">
             <div class="achievement-number">1×</div>
-            <div class="achievement-desc">Golden Globe — Best Supporting Actor (Creed, 2016)</div>
+            <div class="achievement-desc">Golden Globe — Best Supporting Actor for Creed (2016)</div>
           </div>
           <div class="achievement">
             <div class="achievement-number">$4B+</div>
-            <div class="achievement-desc">Total worldwide box office revenue</div>
+            <div class="achievement-desc">Total worldwide box office revenue from his films</div>
           </div>
           <div class="achievement">
             <div class="achievement-number">50+</div>
-            <div class="achievement-desc">Years of continuous career in Hollywood</div>
+            <div class="achievement-desc">Years of continuous career — six different decades with a #1 movie</div>
           </div>
           <div class="achievement">
             <div class="achievement-number">2</div>
-            <div class="achievement-desc">AFI Greatest Heroes: Rocky Balboa & John Rambo</div>
+            <div class="achievement-desc">AFI Greatest Heroes in cinema history: Rocky Balboa & John Rambo</div>
           </div>
           <div class="achievement">
             <div class="achievement-number">★</div>
-            <div class="achievement-desc">Hollywood Walk of Fame Star</div>
+            <div class="achievement-desc">Hollywood Walk of Fame Star for extraordinary contribution to the film industry</div>
           </div>
         </div>
-
-        <!-- ✏️ Escribe los logros aquí -->
-        <div class="achievements-list">
-          <div class="ach-item">🥊 <span class="empty-text">[ Logro 1... ]</span></div>
-          <div class="ach-item">🎬 <span class="empty-text">[ Logro 2... ]</span></div>
-          <div class="ach-item">🏛️ <span class="empty-text">[ Logro 3... ]</span></div>
-          <div class="ach-item">🎨 <span class="empty-text">[ Logro 4... ]</span></div>
-          <div class="ach-item">📚 <span class="empty-text">[ Logro 5... ]</span></div>
-        </div>
-
       </div>
     </section>
-
-    <!-- ══════════════════════════════════════
-         07 — RELEVANT CONNECTIONS
-    ══════════════════════════════════════ -->
-    <section id="connections" class="section section--jungle">
+    <section id="connections" class="section section--cream">
       <div class="container">
-        <div class="section-label">07 — Network</div>
+        <div class="section-label">06 — Network</div>
         <h2 class="section-title">Relevant Connections</h2>
         <div class="connections-grid">
 
           <div class="connection-card">
-            <!-- 🖼️ Foto de la persona conectada -->
+            <!-- 🖼️ YOUR_CONN_1.jpg -->
             <div class="conn-img-slot">
-              <img src="YOUR_CONN_1.jpg" alt="Connection 1"
-                   onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
+              <img src="dolph.jpg" alt="Dolph Lundgren" onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
             </div>
-            <div class="connection-role">Mentor</div>
-            <h3>John G. Avildsen</h3>
-            <p class="empty-text">[ Escribe sobre esta conexión... ]</p>
+            <div class="connection-role">Co-star</div>
+            <h3>Dolph Lundgren</h3>
+            <p>Famous actor who performed alongside Stallone in action films, including Rocky IV where he played the Soviet boxer Ivan Drago.</p>
           </div>
 
           <div class="connection-card">
+            <!-- 🖼️ YOUR_CONN_2.jpg -->
             <div class="conn-img-slot">
-              <img src="YOUR_CONN_2.jpg" alt="Connection 2"
-                   onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
+              <img src="arnold.jpg" alt="Arnold Schwarzenegger" onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
             </div>
-            <div class="connection-role">Colleague & Friend</div>
+            <div class="connection-role">Rival & Friend</div>
             <h3>Arnold Schwarzenegger</h3>
-            <p class="empty-text">[ Escribe sobre esta conexión... ]</p>
+            <p>Known for his role in The Terminator. He had a famous rivalry with Stallone — he laughed at him when Rocky lost at the 1977 Golden Globes — but their competition motivated both to make better movies.</p>
           </div>
 
           <div class="connection-card">
+            <!-- 🖼️ YOUR_CONN_3.jpg -->
             <div class="conn-img-slot">
-              <img src="YOUR_CONN_3.jpg" alt="Connection 3"
-                   onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
+              <img src="bruce.jpg" alt="Bruce Willis" onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
             </div>
-            <div class="connection-role">Creative Partner</div>
-            <h3>Ryan Coogler</h3>
-            <p class="empty-text">[ Escribe sobre esta conexión... ]</p>
-          </div>
-
-          <div class="connection-card">
-            <div class="conn-img-slot">
-              <img src="YOUR_CONN_4.jpg" alt="Connection 4"
-                   onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
-            </div>
-            <div class="connection-role">Family</div>
-            <h3>Sage Stallone</h3>
-            <p class="empty-text">[ Escribe sobre esta conexión... ]</p>
-          </div>
-
-          <div class="connection-card">
-            <div class="conn-img-slot">
-              <img src="YOUR_CONN_5.jpg" alt="Connection 5"
-                   onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
-            </div>
-            <div class="connection-role">Business Partner</div>
+            <div class="connection-role">Co-star</div>
             <h3>Bruce Willis</h3>
-            <p class="empty-text">[ Escribe sobre esta conexión... ]</p>
+            <p>Performed alongside Stallone in The Expendables franchise, where they reunited the biggest action stars of several decades in an iconic series of films.</p>
           </div>
 
           <div class="connection-card">
+            <!-- 🖼️ YOUR_CONN_4.jpg -->
             <div class="conn-img-slot">
-              <img src="YOUR_CONN_6.jpg" alt="Connection 6"
-                   onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
+              <img src="kurt.jpg" alt="Kurt Russell" onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
             </div>
-            <div class="connection-role">Inspiration To</div>
-            <h3>[ Nombre ]</h3>
-            <p class="empty-text">[ Escribe sobre esta conexión... ]</p>
+            <div class="connection-role">Co-star</div>
+            <h3>Kurt Russell</h3>
+            <p>Another famous action star who performed alongside Stallone, forming part of the elite group of action icons that defined an entire era of Hollywood cinema.</p>
+          </div>
+
+          <div class="connection-card">
+            <!-- 🖼️ YOUR_CONN_5.jpg -->
+            <div class="conn-img-slot">
+              <img src="jason.jpg" alt="Jason Statham" onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
+            </div>
+            <div class="connection-role">Admired Colleague</div>
+            <h3>Jason Statham</h3>
+            <p>Stallone has openly admitted that he admires Jason Statham's real martial-arts skills and work ethic. They worked together in The Expendables franchise.</p>
+          </div>
+
+          <div class="connection-card">
+            <!-- 🖼️ YOUR_CONN_6.jpg -->
+            <div class="conn-img-slot">
+              <img src="donald.jpg" alt="Donald Trump" onerror="this.parentElement.innerHTML='<span class=\'conn-icon\'>👤</span>'">
+            </div>
+            <div class="connection-role">Political Link</div>
+            <h3>Donald Trump</h3>
+            <p>Stallone has been linked with politics. Donald Trump convinced him to become a diplomatic representative and special ambassador of Hollywood in 2025.</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         08 — REASON TO CHOOSE
-    ══════════════════════════════════════ -->
-    <section id="reason" class="section section--blood">
+    <!-- 07 REASON TO CHOOSE -->
+    <section id="reason" class="section section--red">
       <div class="container">
-        <div class="section-label">08 — Our Choice</div>
+        <div class="section-label">07 — Our Choice</div>
         <h2 class="section-title">Reason to Choose a Role Model</h2>
-
         <div class="reason-content">
           <div class="reason-main">
-            <p class="reason-intro empty-text">[ Escribe la introducción de por qué eligieron a Stallone... ]</p>
+            <p class="reason-intro">
+              Sylvester Stallone is a role model because his career shows perseverance and
+              dedication in the film industry. He has worked with famous actors such as Dolph
+              Lundgren, Bruce Willis, and Kurt Russell in many action movies. He also had a
+              well-known rivalry with Arnold Schwarzenegger, which became part of action film history.
+            </p>
             <div class="reasons-list">
+              <div class="reason-item">
+                <span class="reason-icon">🏆</span>
+                <div>
+                  <strong>Extraordinary Achievements</strong>
+                  <p>His movie Rocky earned him two Academy Award nominations, and later he won a Golden Globe for his role in Creed. Movies starring him have generated more than 4 billion dollars worldwide.</p>
+                </div>
+              </div>
+              <div class="reason-item">
+                <span class="reason-icon">🕐</span>
+                <div>
+                  <strong>A Career of Over Fifty Years</strong>
+                  <p>Stallone has had a career of more than fifty years. His characters Rocky Balboa and John Rambo were recognized as two of the greatest heroes in cinema history.</p>
+                </div>
+              </div>
+              <div class="reason-item">
+                <span class="reason-icon">⭐</span>
+                <div>
+                  <strong>Hollywood Walk of Fame</strong>
+                  <p>He received a star on the Hollywood Walk of Fame. His perseverance and success make him an inspiring figure for anyone who faces obstacles in life.</p>
+                </div>
+              </div>
               <div class="reason-item">
                 <span class="reason-icon">🔥</span>
                 <div>
-                  <strong>[ Razón 1 ]</strong>
-                  <p class="empty-text">[ Explica la razón 1... ]</p>
-                </div>
-              </div>
-              <div class="reason-item">
-                <span class="reason-icon">✍️</span>
-                <div>
-                  <strong>[ Razón 2 ]</strong>
-                  <p class="empty-text">[ Explica la razón 2... ]</p>
-                </div>
-              </div>
-              <div class="reason-item">
-                <span class="reason-icon">🌱</span>
-                <div>
-                  <strong>[ Razón 3 ]</strong>
-                  <p class="empty-text">[ Explica la razón 3... ]</p>
-                </div>
-              </div>
-              <div class="reason-item">
-                <span class="reason-icon">💡</span>
-                <div>
-                  <strong>[ Razón 4 ]</strong>
-                  <p class="empty-text">[ Explica la razón 4... ]</p>
+                  <strong>Never Gave Up</strong>
+                  <p>He refused to sell his Rocky script unless he could star in it — rejecting hundreds of offers. This decision, born out of pure self-belief, turned him into a global superstar.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="reason-stat-block">
-            <div class="big-stat">1,500+</div>
-            <div class="big-stat-label">Rejections before Rocky</div>
             <div class="big-stat">3</div>
-            <div class="big-stat-label">Days to write the script</div>
-            <div class="big-stat">$1M</div>
-            <div class="big-stat-label">Rocky's budget</div>
-            <div class="big-stat">$225M</div>
-            <div class="big-stat-label">Rocky's box office</div>
+            <div class="big-stat-label">Days to write the Rocky script</div>
+            <div class="big-stat">$4B+</div>
+            <div class="big-stat-label">Worldwide box office</div>
+            <div class="big-stat">50+</div>
+            <div class="big-stat-label">Years of career</div>
+            <div class="big-stat">6</div>
+            <div class="big-stat-label">Decades with a #1 movie</div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         09 — ABOUT THE TEAM
-         🖼️ Reemplaza YOUR_TEAM_PHOTO_N.jpg con la foto de cada integrante
-    ══════════════════════════════════════ -->
-    <section id="team" class="section section--dark">
+    <!-- 08 TEAM -->
+    <section id="team" class="section section--light">
       <div class="container">
-        <div class="section-label">09 — Us</div>
+        <div class="section-label">08 — Us</div>
         <h2 class="section-title">About the Team</h2>
-        <p class="team-intro empty-text">[ Escribe aquí una descripción breve del equipo... ]</p>
+        <p class="team-intro">We are five students united by a passion for telling stories about people who inspire us. Like Stallone, we believe that perseverance and hard work lead to extraordinary results.</p>
 
         <div class="team-grid">
 
           <div class="team-card">
             <div class="team-photo-wrap">
-              <img src="YOUR_TEAM_PHOTO_1.jpg" alt="Member 1"
+              <!-- 🖼️ YOUR_TEAM_PHOTO_1.jpg -->
+              <img src="YOUR_TEAM_PHOTO_1.jpg" alt="Claudia"
                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-              <div class="team-avatar av--rocky">01</div>
+              <div class="team-avatar av--rocky">CY</div>
             </div>
-            <div class="team-name">[ Nombre ]</div>
-            <div class="team-role">[ Rol ]</div>
+            <div class="team-name">Claudia Yetlamitze</div>
+            <div class="team-role">Anaya Aguiñaga</div>
           </div>
 
           <div class="team-card">
             <div class="team-photo-wrap">
-              <img src="YOUR_TEAM_PHOTO_2.jpg" alt="Member 2"
+              <!-- 🖼️ YOUR_TEAM_PHOTO_2.jpg -->
+              <img src="YOUR_TEAM_PHOTO_2.jpg" alt="Alejandra"
                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-              <div class="team-avatar av--rambo">02</div>
+              <div class="team-avatar av--red">AM</div>
             </div>
-            <div class="team-name">[ Nombre ]</div>
-            <div class="team-role">[ Rol ]</div>
+            <div class="team-name">Alejandra Michelle</div>
+            <div class="team-role">Mateo García</div>
           </div>
 
           <div class="team-card">
             <div class="team-photo-wrap">
-              <img src="YOUR_TEAM_PHOTO_3.jpg" alt="Member 3"
+              <!-- 🖼️ YOUR_TEAM_PHOTO_3.jpg -->
+              <img src="YOUR_TEAM_PHOTO_3.jpg" alt="Martha"
                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-              <div class="team-avatar av--rocky">03</div>
+              <div class="team-avatar av--rocky">MA</div>
             </div>
-            <div class="team-name">[ Nombre ]</div>
-            <div class="team-role">[ Rol ]</div>
+            <div class="team-name">Martha Arcelia</div>
+            <div class="team-role">Miranda Arredondo</div>
           </div>
 
           <div class="team-card">
             <div class="team-photo-wrap">
-              <img src="YOUR_TEAM_PHOTO_4.jpg" alt="Member 4"
+              <!-- 🖼️ YOUR_TEAM_PHOTO_4.jpg -->
+              <img src="YOUR_TEAM_PHOTO_4.jpg" alt="Erick"
                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-              <div class="team-avatar av--rambo">04</div>
+              <div class="team-avatar av--red">EA</div>
             </div>
-            <div class="team-name">[ Nombre ]</div>
-            <div class="team-role">[ Rol ]</div>
+            <div class="team-name">Erick Adrian</div>
+            <div class="team-role">Ramirez Hernandez</div>
           </div>
 
           <div class="team-card">
             <div class="team-photo-wrap">
-              <img src="YOUR_TEAM_PHOTO_5.jpg" alt="Member 5"
+              <!-- 🖼️ YOUR_TEAM_PHOTO_5.jpg -->
+              <img src="YOUR_TEAM_PHOTO_5.jpg" alt="Eder"
                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-              <div class="team-avatar av--rocky">05</div>
+              <div class="team-avatar av--rocky">ES</div>
             </div>
-            <div class="team-name">[ Nombre ]</div>
-            <div class="team-role">[ Rol ]</div>
+            <div class="team-name">Eder Saúl</div>
+            <div class="team-role">Rangel Durán</div>
           </div>
 
         </div>
